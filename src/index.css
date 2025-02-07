@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+    --font-gabarito: "Gabarito", "sans-serif";
+    --color-yellow: rgb(254, 224, 50);
+   --color-blue: rgb(48, 96, 183);
+}
+
+body {
+  transition-property: background-color;
+  transition-duration: 300ms;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.cursor {
+  position: absolute;
+  pointer-events: none;
+  width: 16px;
+  height: 16px;
+  z-index: 999;
+}
+
+.door {
+    background-color: #FEE032;
+    width: 100%;
+    height: 100%;
+    transition-duration: 300ms;
+}
+
+.door:hover {
+    transform: perspective( 600px ) rotateY( 30deg );
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-moz-selection { 
+  background-color: transparent; 
+  color: #3060B7;
+  }
+  
+  ::selection {
+  background-color: transparent;
+  color: #3060B7;
+  }
+
+  .arc {
+    animation: rotate 10s linear infinite;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+nav .menu {
+  z-index: 999 !important;
+}
