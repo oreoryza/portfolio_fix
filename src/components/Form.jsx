@@ -99,7 +99,7 @@ const Form = () => {
           }}
           name="message"
           id="message"
-          className="bg-transparent border-2 border-yellow focus:border-blue duration-300 p-2 outline-0 min-h-48 resize-none"
+          className="bg-transparent border-2 border-yellow focus:border-blue duration-300 p-2 outline-0 min-h-36 resize-none"
         />
       </motion.div>
       <motion.div initial={{x:1000}} animate={{x:0}} exit={{x:1000}} transition={{duration:0.5, delay:0.3}} className="flex justify-end">

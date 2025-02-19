@@ -11,7 +11,7 @@ const Navigation = ({ handleLinkClick }) => {
     <motion.div
       className={`font-gabarito ${
         theme === "dark" ? "" : "text-white"
-      } flex flex-col gap-1 md:text-4xl text-2xl select-none`}
+      } flex flex-col gap-1 md:text-4xl text-3xl select-none`}
     >
       <Link
         to="/"
@@ -67,6 +67,13 @@ const Navigation = ({ handleLinkClick }) => {
       >
         Contact
       </Link>
+      <p
+        className={`${
+          theme === "dark" ? "" : "text-white"
+        } text-sm opacity-50 select-none mt-8 duration-300`}
+      >
+        <i className="bi bi-c-circle"></i> ORYZA SATIVA
+      </p>
     </motion.div>
   );
 };
