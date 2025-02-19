@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setProjectPreview } from "../redux/slices/projectSlice";
 import { Link } from "react-router-dom";
+
 import { motion } from "motion/react";
 import { AnimatePresence } from "motion/react";
 
@@ -76,7 +77,6 @@ const ProjectsList = () => {
             exit={{ opacity: 0, scale: 1.1 }}
             transition={{ duration: 0.15 }}
             src={projectPreview}
-            alt=""
           />
         </AnimatePresence>
         <div className="absolute left-0 w-full h-full flex justify-center items-center"><PiStarFourLight className="text-6xl text-blue"/></div>

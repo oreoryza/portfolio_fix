@@ -1,7 +1,9 @@
 import React, { useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+
 import Draggable from "react-draggable";
+
 import * as motion from "motion/react-client";
 
 const BannerName = () => {
@@ -10,6 +12,7 @@ const BannerName = () => {
   const [isHover1, setIsHover1] = useState(false);
   const [isHover2, setIsHover2] = useState(false);
 
+  // Dragging alphabet of the name
   const onDrag = () => {
     isDraggingRef.current = true;
   };
@@ -18,18 +21,12 @@ const BannerName = () => {
     isDraggingRef.current = false;
   };
 
-  const bounds = {
-    left: 0,
-    right: window.innerWidth - 100,
-    top: 0,
-    bottom: window.innerHeight - 100,
-  };
   return (
     <div className="flex flex-col items-center gap-10 w-full py-12 z-40 overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: -16 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3, ease:"easeIn" }}
+        transition={{ duration: 0.5, delay: 0.3, ease: "easeIn" }}
         className="font-gabarito font-medium text-8xl text-yellow hidden md:flex justify-between w-full select-none"
       >
         <Draggable onDrag={onDrag} onStop={onStop}>
@@ -85,8 +82,8 @@ const BannerName = () => {
       >
         <p className="md:text-center">
           I loves design and programming, which inspired my journey into
-          frontend development. I'm eager to contribute my skills in React JS
-          as part of a dynamic team of innovators and problem solvers.
+          frontend development. I'm eager to contribute my skills in React JS as
+          part of a dynamic team of innovators and problem solvers.
         </p>
         <div className="font-medium flex md:justify-center items-center w-full gap-8 my-4">
           <Link
@@ -110,7 +107,7 @@ const BannerName = () => {
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3, ease:"easeIn" }}
+        transition={{ duration: 0.5, delay: 0.3, ease: "easeIn" }}
         className="font-gabarito font-medium text-8xl text-yellow hidden md:flex justify-between w-full select-none"
       >
         <Draggable onDrag={onDrag} onStop={onStop}>

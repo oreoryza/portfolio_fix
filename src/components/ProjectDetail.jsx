@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setProject } from "../redux/slices/projectSlice";
@@ -12,6 +12,7 @@ const ProjectDetail = () => {
   const project = useSelector((state) => state.projects.project);
   const theme = useSelector((state) => state.theme.theme);
   
+  // show project berdasarkan sku yang dipilih
   useEffect(() => {
     dispatch(setProject(sku));
   }, [sku, dispatch]);

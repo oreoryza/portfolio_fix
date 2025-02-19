@@ -11,6 +11,7 @@ import { doorToggle } from "../redux/slices/doorSlice";
 
 import { AnimatePresence } from "motion/react";
 import * as motion from "motion/react-client";
+
 import BannerName from "../components/BannerName";
 import ProjectsList from "../components/ProjectsList";
 import ProjectDetail from "../components/ProjectDetail";
@@ -27,6 +28,7 @@ const Home = () => {
   const [desc, setDesc] = useState("");
 
   useEffect(() => {
+    // ketika pintu dibuka background berubah
     if (door) {
       document.body.style.backgroundColor = "#3060B7";
       document.body.style.backgroundImage =
@@ -40,6 +42,7 @@ const Home = () => {
     }
   }, [door, theme]);
 
+  // set deskripsi dan judul untuk tiap halaman route
   useEffect(() => {
     if (location.pathname === "/") {
       setDesc("Personal Portfolio Website.");
@@ -86,6 +89,7 @@ const Home = () => {
                 transition={{ duration: 0.3 }}
                 className="w-screen flex justify-center items-center px-16"
               >
+                {/* routing untuk halaman */}
                 <Routes location={location} key={location.pathname}>
                   <Route path="/" element={<BannerName />} />
                   <Route path="/projects" element={<ProjectsList />} />

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../redux/slices/themeSlice";
 
 import { motion } from "framer-motion";
+
 import Navigation from "./Navigation";
 
 const Navbar = () => {
@@ -10,6 +11,7 @@ const Navbar = () => {
   const theme = useSelector((state) => state.theme.theme);
   const [isHamburger, setIsHamburger] = useState(false);
 
+  // set key untuk membuka menu navigation
   useEffect(() => {
     const handleKeyPress = (event) => {
       if (event.key === "Control") {
@@ -24,6 +26,7 @@ const Navbar = () => {
     };
   }, [dispatch]);
 
+  // tutup menu navigation setelah klik link
   const handleLinkClick = () => {
     setIsHamburger(false);
   };
@@ -104,6 +107,7 @@ const Navbar = () => {
           isHamburger ? "" : "pointer-events-none menu"
         }`}
       >
+        {/* function diteruskan ke komponen navigation */}
         <Navigation handleLinkClick={handleLinkClick} />
         <button
           onClick={() => setIsHamburger(false)}

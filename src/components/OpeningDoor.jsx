@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { AnimatePresence } from "motion/react";
-import * as motion from "motion/react-client";
 import { useSelector, useDispatch } from "react-redux";
 import { doorToggle } from "../redux/slices/doorSlice";
+
+import { AnimatePresence } from "motion/react";
+import * as motion from "motion/react-client";
 
 const OpeningDoor = () => {
   const dispatch = useDispatch();
   const [isDoorHover, setIsDoorHover] = useState(false);
   const door = useSelector((state) => state.door.door);
 
+  // set key untuk toggle pintu
   useEffect(() => {
     const handleKeyPress = (event) => {
       if (event.key === "Enter" && door) {

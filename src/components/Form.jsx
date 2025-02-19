@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import DOMPurify from "dompurify";
+
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 import { AnimatePresence } from "motion/react";
@@ -10,6 +11,7 @@ const Form = () => {
   const theme = useSelector((state) => state.theme.theme);
   const [isSubmitting, setIsSubmitting] = useState(false); // State untuk mengontrol status tombol
 
+  // dompurify secure
   const sanitizeInput = (input) => {
     return DOMPurify.sanitize(input);
   };
