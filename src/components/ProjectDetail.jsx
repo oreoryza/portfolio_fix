@@ -25,7 +25,7 @@ const ProjectDetail = () => {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         className={`fixed right-0 w-screen h-screen ${
           theme === "dark" ? "" : "text-white"
-        } translate-y-24 p-4 pl-16 flex flex-col gap-8 overflow-y-auto pb-48 transition-colors duration-300`}
+        } p-4 pl-16 pt-24 flex flex-col gap-8 overflow-y-auto pb-48 transition-colors duration-300`}
       >
         <h1 className="font-gabarito font-medium text-6xl">{project.name}</h1>
         <div className="w-[35%] min-w-64">
@@ -41,7 +41,7 @@ const ProjectDetail = () => {
         </div>
         <p className="pr-2 md:max-w-2xl max-w-72">{project.description}</p>
         {project?.screenshot?.map((ss, index) => (
-          <img src={ss} alt="" className="w-[40%] min-w-72 border" key={index+1} />
+          <img src={ss} alt="" className="w-[40%] min-w-64 border" key={index+1} />
         ))}
         <div className="flex flex-col gap-4">
           <a href={project.url} target="_blank" rel="noopener noreferrer" className="font-medium text-black bg-yellow p-2 w-fit hover:bg-yellow/[.0] hover:scale-105 hover:text-yellow duration-300">Open <i class="bi bi-link-45deg"></i></a>
