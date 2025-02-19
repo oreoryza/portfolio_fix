@@ -60,7 +60,7 @@ const OpeningDoor = () => {
         )}
       </AnimatePresence>
       {door && (
-      <motion.div initial={{opacity:0}} animate={{opacity:0.5}} transition={{duration:0.3, delay:0.8}} className="font-gabarito absolute bottom-40 text-white select-none">
+      <motion.div initial={{opacity:0}} animate={{opacity:0.5}} transition={{duration:0.3, delay:0.8}} className="font-gabarito mt-80 text-white select-none">
         {isDoorHover ? "" : "ENTER."}
       </motion.div>
       )}

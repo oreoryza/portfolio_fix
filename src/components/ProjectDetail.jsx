@@ -25,7 +25,7 @@ const ProjectDetail = () => {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         className={`fixed right-0 w-screen h-screen ${
           theme === "dark" ? "" : "text-white"
-        } p-4 pl-16 pt-24 flex flex-col gap-8 overflow-y-auto pb-48 transition-colors duration-300`}
+        } p-4 pl-16 top-24 pb-48 flex flex-col gap-8 overflow-y-auto transition-colors duration-300`}
       >
         <h1 className="font-gabarito font-medium text-6xl">{project.name}</h1>
         <div className="w-[35%] min-w-64">

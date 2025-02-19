@@ -98,7 +98,7 @@ const Home = () => {
             <div
               className={`${
                 theme === "dark" ? "border-black" : "text-white border-white"
-              } absolute flex flex-col justify-end items-center gap-6 top-0 left-0 border-r w-12 h-screen duration-300`}
+              } absolute flex flex-col justify-end items-center gap-6 top-0 left-0 border-r w-12 bottom-0 duration-300`}
             >
               <p
                 className={`font-gabarito rotate-180 border-t ${

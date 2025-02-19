@@ -98,7 +98,7 @@ const Navbar = () => {
         initial={{ opacity: 0 }}
         animate={isHamburger ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.3, delay: 0.2 }}
-        className={`fixed top-0 left-0 w-screen h-screen ${
+        className={`fixed top-0 left-0 w-screen bottom-0 ${
           theme === "dark" ? "bg-white" : "bg-[#0D0D0D]"
         } p-[15%] z-50 duration-300 ${
           isHamburger ? "" : "pointer-events-none menu"
