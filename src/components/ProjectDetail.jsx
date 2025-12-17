@@ -46,6 +46,9 @@ const ProjectDetail = () => {
         ))}
         <div className="flex flex-col gap-4">
           <a href={project.url} target="_blank" rel="noopener noreferrer" className="font-medium text-black bg-yellow p-2 w-fit hover:bg-yellow/[.0] hover:scale-105 hover:text-yellow duration-300">Open <i class="bi bi-link-45deg"></i></a>
+          {project.previewUrl ? (
+            <a href={project.previewUrl} target="_blank" rel="noopener noreferrer" className="font-medium text-black bg-yellow p-2 w-fit hover:bg-yellow/[.0] hover:scale-105 hover:text-yellow duration-300">Preview <i class="bi bi-link-45deg"></i></a>
+          ) : ("")}
           <Link to="/projects" className="font-medium text-white bg-blue p-2 w-fit hover:bg-blue/[.0] hover:scale-105 hover:text-blue duration-300">Back To Projects</Link>
         </div>
       </motion.div>

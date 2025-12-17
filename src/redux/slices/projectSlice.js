@@ -4,6 +4,57 @@ const initialState = {
   projects: [
     {
         id: 1,
+        name: "Educon",
+        sku: "educon",
+        tech: [
+          "Webflow",
+        ],
+        description: "[Agensip Intern Project] Premier international conference for educators, researchers, and professionals in the field of education.",
+        date: "2025.11",
+        url: "https://agensip-educon.webflow.io/",
+        previewUrl: "https://preview.webflow.com/preview/agensip-educon?utm_medium=preview_link&utm_source=designer&utm_content=agensip-educon&preview=8f9952c355424b13545ebd64fb2674fa&workflow=canvas",
+        img: "https://pbs.twimg.com/media/GhorwcEa4AATuiS?format=png&name=large",
+        screenshot: [
+          "https://pbs.twimg.com/media/GkGY3RYboAA7lIp?format=jpg&name=medium",
+          "https://pbs.twimg.com/media/GkGY3R3XEAAHHCL?format=jpg&name=medium"
+        ]
+    },
+    {
+        id: 2,
+        name: "Naranja",
+        sku: "naranja",
+        tech: [
+          "Webflow",
+        ],
+        description: "[Agensip Intern Project] Naranja is a Design Studio engaged in visual design, Brand Identity and Development for websites, mobile, desktop and any digital environment.",
+        date: "2025.11",
+        url: "https://naranja-site.webflow.io/",
+        previewUrl: "https://preview.webflow.com/preview/naranja-site?utm_medium=preview_link&utm_source=designer&utm_content=naranja-site&preview=d38c3aaf601a07bc01f5c8acfddf5e46&workflow=preview",
+        img: "https://pbs.twimg.com/media/GhorwcEa4AATuiS?format=png&name=large",
+        screenshot: [
+          "https://pbs.twimg.com/media/GkGY3RYboAA7lIp?format=jpg&name=medium",
+          "https://pbs.twimg.com/media/GkGY3R3XEAAHHCL?format=jpg&name=medium"
+        ]
+    },
+    {
+        id: 3,
+        name: "Chrono",
+        sku: "chrono",
+        tech: [
+          "Webflow",
+        ],
+        description: "[Agensip Intern Project]",
+        date: "2024.11",
+        url: "https://chrono-site.webflow.io/",
+        previewUrl: "https://preview.webflow.com/preview/chrono-site?utm_medium=preview_link&utm_source=designer&utm_content=chrono-site&preview=50a9304fa401505f260636a2462ecaf6&pageId=68c38661b2f97cbd0274528a&locale=en&workflow=preview",
+        img: "https://pbs.twimg.com/media/GhorwcEa4AATuiS?format=png&name=large",
+        screenshot: [
+          "https://pbs.twimg.com/media/GkGY3RYboAA7lIp?format=jpg&name=medium",
+          "https://pbs.twimg.com/media/GkGY3R3XEAAHHCL?format=jpg&name=medium"
+        ]
+    },
+    {
+        id: 4,
         name: "Personal AI",
         sku: "personal-ai",
         tech: [
@@ -23,7 +74,7 @@ const initialState = {
         ]
     },
     {
-        id: 2,
+        id: 5,
         name: "Personal Blog",
         sku: "personal-blog",
         tech: [
@@ -45,7 +96,7 @@ const initialState = {
         ]
     },
     {
-        id: 3,
+        id: 6,
         name: "Dsgnr.",
         sku: "dsgnr",
         tech: [
@@ -67,7 +118,7 @@ const initialState = {
         ]
     },
     {
-        id: 4,
+        id: 7,
         name: "Exclusive",
         sku: "exclusive",
         tech: [
