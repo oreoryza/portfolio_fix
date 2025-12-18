@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 import { AnimatePresence } from "motion/react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Pagination } from "swiper/modules";
+import { FreeMode, Mousewheel, Scrollbar } from "swiper/modules";
 
 import { PiStarFourLight } from "react-icons/pi";
 
@@ -34,16 +34,14 @@ const ProjectsList = () => {
         }}
         className="flex gap-6"
       >
-        <motion.div initial={{opacity:0}} animate={{opacity:0.5}} transition={{duration:0.3, delay:1.1, ease:"easeInOut"}} className="flex flex-col gap-2 items-center max-lg:hidden">
-          <div className={`w-0.5 h-12 duration-300 ${theme==="dark" ? "bg-black" : "bg-white"}`}></div>
-          <div className={`select-none duration-300 ${theme==="dark" ? "" : "text-white"}`}>Drag</div>
-          <div className={`w-0.5 h-12 duration-300 ${theme==="dark" ? "bg-black" : "bg-white"}`}></div>
-        </motion.div>
         <Swiper
           direction={"vertical"}
           freeMode={true}
-          modules={[FreeMode, Pagination]}
-          className={`flex flex-col gap-8 h-32 ${
+          slidesPerView={4}
+          mousewheel={true}
+          scrollbar={true}
+          modules={[FreeMode, Mousewheel, Scrollbar]}
+          className={`flex flex-col gap-8 h-[60vh] ${
             theme === "dark" ? "" : "text-white"
           } duration-300`}
         >

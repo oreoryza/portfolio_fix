@@ -33,7 +33,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="absolute top-0 w-screen h-24 flex justify-between z-50">
+      <nav className={`absolute top-0 w-screen h-24 flex justify-between bg-linear-to-b ${
+          theme === "dark" ? "from-white to-white/[.0]" : "from-[#0D0D0D] to-[#0D0D0D]/[.0]"} z-50`}>
         <div className="flex gap-4">
           <button
             title="Menu"

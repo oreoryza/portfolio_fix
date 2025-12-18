@@ -24,9 +24,9 @@ const ProjectDetail = () => {
         animate={{ x: 0 }}
         exit={{ x: 1000 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className={`fixed right-0 w-screen h-screen ${
+        className={`fixed top-0 right-0 w-screen h-screen ${
           theme === "dark" ? "" : "text-white"
-        } p-4 pl-16 top-24 pb-48 flex flex-col gap-8 overflow-y-auto transition-colors duration-300`}
+        } p-4 pl-16 pt-24 pb-48 flex flex-col gap-8 overflow-y-auto transition-colors duration-300`}
       >
         <h1 className="font-gabarito font-medium text-6xl">{project.name}</h1>
         <div className="w-[35%] min-w-64">
@@ -52,11 +52,6 @@ const ProjectDetail = () => {
           <Link to="/projects" className="font-medium text-white bg-blue p-2 w-fit hover:bg-blue/[.0] hover:scale-105 hover:text-blue duration-300">Back To Projects</Link>
         </div>
       </motion.div>
-      <motion.div initial={{opacity:0}} animate={{opacity:0.5}} transition={{duration:0.3, delay:0.5, ease:"easeInOut"}} className="absolute right-12 flex flex-col gap-2 items-center max-md:hidden pointer-events-none">
-          <div className={`w-0.5 h-12 duration-300 ${theme==="dark" ? "bg-black" : "bg-white"}`}></div>
-          <div className={`select-none duration-300 ${theme==="dark" ? "" : "text-white"}`}>Scroll</div>
-          <div className={`w-0.5 h-12 duration-300 ${theme==="dark" ? "bg-black" : "bg-white"}`}></div>
-        </motion.div>
     </AnimatePresence>
   );
 };

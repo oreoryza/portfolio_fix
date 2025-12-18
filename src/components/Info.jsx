@@ -43,7 +43,7 @@ const Info = () => {
         </div>
         <a
           draggable={false}
-          href="https://drive.google.com/file/d/16UDl6EZl5vX1_UeDO_HRgNozdQKqTTbx/view?usp=sharing"
+          href="https://drive.google.com/file/d/1q5ntEgNEbQ7HaaQolJlKxapA1e-H5L4D/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-4 underline flex hover:gap-1"
@@ -143,6 +143,24 @@ const Info = () => {
             className="underline"
           >
             figma
+          </a>
+          <a
+            draggable={false}
+            href="https://gsap.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            gsap
+          </a>
+          <a
+            draggable={false}
+            href="https://webflow.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            webflow
           </a>
         </div>
       </div>
