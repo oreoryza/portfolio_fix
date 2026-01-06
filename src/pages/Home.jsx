@@ -77,7 +77,7 @@ const Home = () => {
               damping: 10,
               duration: 0.5,
             }}
-            className="absolute top-0 bottom-0 flex justify-center items-center w-full overflow-hidden"
+            className="absolute top-0 min-h-screen flex justify-center items-center w-full overflow-hidden"
           >
             <Navbar />
             <AnimatePresence initial={false} mode="wait">
