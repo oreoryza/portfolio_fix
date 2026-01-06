@@ -35,7 +35,7 @@ const OpeningDoor = () => {
             initial={{ opacity: 0, scale: 10 }}
             animate={{ opacity: 0.9, scale: 1 }}
             exit={{ opacity: 0, scale: 10 }}
-            transition={{delay: 0.5, duration: 0.3}}
+            transition={{delay: 0.5, duration: 0.7}}
             onClick={() => dispatch(doorToggle())}
             className="absolute group w-40 h-64 bg-transparent border-8 border-yellow overflow-hidden"
           >

@@ -74,7 +74,7 @@ const Home = () => {
               delay: 0.8,
               stiffness: 75,
               damping: 10,
-              duration: 0.5,
+              duration: 0.7,
             }}
             className="absolute top-0 bottom-0 flex justify-center items-center w-full overflow-hidden"
           >
