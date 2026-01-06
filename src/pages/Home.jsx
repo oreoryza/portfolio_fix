@@ -72,12 +72,11 @@ const Home = () => {
             animate={{ opacity: 0.9, scale: 1 }}
             transition={{
               delay: 0.8,
-              type: "spring",
               stiffness: 75,
               damping: 10,
               duration: 0.5,
             }}
-            className="absolute top-0 min-h-screen flex justify-center items-center w-full overflow-hidden"
+            className="absolute top-0 bottom-0 flex justify-center items-center w-full overflow-hidden"
           >
             <Navbar />
             <AnimatePresence initial={false} mode="wait">
@@ -102,7 +101,7 @@ const Home = () => {
             <div
               className={`${
                 theme === "dark" ? "border-black" : "text-white border-white"
-              } absolute flex flex-col justify-end items-center gap-6 top-0 left-0 border-r w-12 bottom-0 duration-300`}
+              } absolute flex flex-col justify-end items-center gap-2 top-0 left-0 border-r w-12 bottom-0 duration-300`}
             >
               <p
                 className={`font-gabarito rotate-180 border-t ${
@@ -115,7 +114,7 @@ const Home = () => {
               <div
                 title="Exit"
                 onClick={() => dispatch(doorToggle())}
-                className="w-6 h-6 bg-yellow border-l-2 border-t-2 border-blue my-4 hover:-rotate-90 duration-300 cursor-pointer"
+                className="w-6 h-10 bg-yellow border-l-4 border-blue my-4 hover:border-l-0 hover:border-r-20 duration-300 cursor-pointer"
               ></div>
             </div>
             <div
@@ -133,6 +132,11 @@ const Home = () => {
             <h2 className="absolute bottom-0 right-0 font-gabarito font-bold md:text-9xl text-6xl text-yellow md:translate-y-5 translate-y-2 select-none pointer-events-none -z-50">
               {title}
             </h2>
+            <div
+            className={`fixed top-0 bottom-0 w-full h-full border pointer-events-none z-99 ${
+              theme === "dark" ? "border-black" : "border-white"
+            }`}
+          ></div>
           </motion.div>
         )}
       </AnimatePresence>

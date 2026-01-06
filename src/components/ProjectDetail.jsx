@@ -26,30 +26,32 @@ const ProjectDetail = () => {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         className={`fixed top-0 right-0 w-screen h-screen ${
           theme === "dark" ? "" : "text-white"
-        } p-4 pl-16 pt-24 pb-48 flex flex-col gap-8 overflow-y-auto transition-colors duration-300`}
+        } pl-16 pr-4 flex transition-colors duration-300`}
       >
-        <h1 className="font-gabarito font-medium text-6xl">{project.name}</h1>
-        <div className="w-[35%] min-w-64">
-          <img src={project.img} alt="" className="border"/>
-        </div>
-        <div className="flex flex-col gap-2">
-          <p>Technologies:</p>
-          <div className="flex gap-1 flex-wrap">
-            {project?.tech?.map((tech, index) => (
-              <p className="border p-1 rounded select-none hover:scale-105 transition-transform duration-300" key={index+1}>{tech}</p>
-            ))}
+        <div className="flex flex-col gap-8 overflow-y-auto min-h-screen pt-24 pb-48">
+          <h1 className="font-gabarito font-medium text-6xl">{project.name}</h1>
+          <div className="w-[35%] min-w-64">
+            <img src={project.img} alt="" className="border"/>
           </div>
-        </div>
-        <p className="pr-2 md:max-w-2xl max-w-72">{project.description}</p>
-        {project?.screenshot?.map((ss, index) => (
-          <img src={ss} alt="" className="w-[40%] min-w-64 border" key={index+1} />
-        ))}
-        <div className="flex flex-col gap-4">
-          <a href={project.url} target="_blank" rel="noopener noreferrer" className="font-medium text-black bg-yellow p-2 w-fit hover:bg-yellow/[.0] hover:scale-105 hover:text-yellow duration-300">Open <i class="bi bi-link-45deg"></i></a>
-          {project.previewUrl ? (
-            <a href={project.previewUrl} target="_blank" rel="noopener noreferrer" className="font-medium text-black bg-yellow p-2 w-fit hover:bg-yellow/[.0] hover:scale-105 hover:text-yellow duration-300">Preview <i class="bi bi-link-45deg"></i></a>
-          ) : ("")}
-          <Link to="/projects" className="font-medium text-white bg-blue p-2 w-fit hover:bg-blue/[.0] hover:scale-105 hover:text-blue duration-300">Back To Projects</Link>
+          <div className="flex flex-col gap-2">
+            <p>Technologies:</p>
+            <div className="flex gap-1 flex-wrap">
+              {project?.tech?.map((tech, index) => (
+                <p className="border p-1 rounded select-none hover:scale-105 transition-transform duration-300" key={index+1}>{tech}</p>
+              ))}
+            </div>
+          </div>
+          <p className="pr-2 md:max-w-2xl max-w-72">{project.description}</p>
+          {project?.screenshot?.map((ss, index) => (
+            <img src={ss} alt="" className="w-[40%] min-w-64 border" key={index+1} />
+          ))}
+          <div className="flex flex-col gap-4">
+            <a href={project.url} target="_blank" rel="noopener noreferrer" className="font-medium text-black bg-yellow p-2 w-fit hover:bg-yellow/[.0] hover:scale-105 hover:text-yellow duration-300">Open <i class="bi bi-link-45deg"></i></a>
+            {project.previewUrl ? (
+              <a href={project.previewUrl} target="_blank" rel="noopener noreferrer" className="font-medium text-black bg-yellow p-2 w-fit hover:bg-yellow/[.0] hover:scale-105 hover:text-yellow duration-300">Preview <i class="bi bi-link-45deg"></i></a>
+            ) : ("")}
+            <Link to="/projects" className="font-medium text-white bg-blue p-2 w-fit hover:bg-blue/[.0] hover:scale-105 hover:text-blue duration-300">Back To Projects</Link>
+          </div>
         </div>
       </motion.div>
     </AnimatePresence>
